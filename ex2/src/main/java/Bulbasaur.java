@@ -9,31 +9,34 @@ public class Bulbasaur {
         this.level = 1;
     }
 
-     public Bulbasaur(int id, int level) {
+    public Bulbasaur(int id, int level) {
         this.id = id;
         this.level = level;
-    }
-    
+    }   
     // setLevel method
     public void setLevel(int lv) {
         // TODO: Implement this method
         // Update the level
         // If the new level is 16 or higher but less than 32, evolve to Ivysaur
         // If the new level is 32 or higher, evolve to Venusaur
-        if(lv > 16 && lv < 32){
-            level = lv;
-            id = 2;
-        }
         if(lv >= 32){
             level = lv;
             id = 3;
+        }
+        else if(lv >= 16){
+            level = lv;
+            id = 2;
+        }
+        else{
+            level = lv;
+            id = 1;
         }
     }
 
     // getLevel method
     public int getLevel() {
         // TODO: Implement this method
-        return level;
+        return level; 
     }
 
     // getName method
@@ -67,7 +70,7 @@ public class Bulbasaur {
     public String toString() {
         // TODO: Implement this method
         // Return a string representation of the Bulbasaur object
-        return "Bulbasaur: Level " + level + ", ID: " + id; 
+        return getName() + ": Level " + level + ", ID: " + id; 
     }
 
     // equals method
@@ -75,12 +78,10 @@ public class Bulbasaur {
     public boolean equals(Object obj) {
         // TODO: Implement this method
         // Compare this Bulbasaur object with another object
-        if(this.id == ((Bulbasaur)obj).getID() && this.level == ((Bulbasaur)obj).getLevel()){
-            return true;
-        }
-        else{
-            return false;
-        }  
+        if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+    Bulbasaur bulbasaur = (Bulbasaur) obj;
+    return id == bulbasaur.id && level == bulbasaur.level;
     }
 
     // copy method
