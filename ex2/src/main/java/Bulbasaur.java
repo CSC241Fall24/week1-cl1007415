@@ -3,12 +3,17 @@ public class Bulbasaur {
     private int level;
 
     // Constructor
-    public Bulbasaur(int id, int level) {
+    public Bulbasaur() {
         // TODO: Initialize id and level with appropriate values
+        this.id = 1;
+        this.level = 1;
+    }
+
+     public Bulbasaur(int id, int level) {
         this.id = id;
         this.level = level;
     }
-
+    
     // setLevel method
     public void setLevel(int lv) {
         // TODO: Implement this method
