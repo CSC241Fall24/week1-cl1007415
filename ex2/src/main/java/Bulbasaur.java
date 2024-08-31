@@ -70,7 +70,7 @@ public class Bulbasaur {
     public String toString() {
         // TODO: Implement this method
         // Return a string representation of the Bulbasaur object
-        return "Level " + level + ", ID: " + id; 
+        return "Level: " + level + ", ID: " + id; 
     }
 
     // equals method
